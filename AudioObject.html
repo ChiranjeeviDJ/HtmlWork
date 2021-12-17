@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Audio Object</title>
+	<style>
+		h1 {
+			color: green;
+		}
+		
+		h2 {
+			font-family: Impact;
+		}
+		
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>GeeksforGeeks</h1>
+	<h2>Audio Object</h2>
+
+	<p>Double Click the "Create"
+	button to create an Audio Object.</p>
+
+	<button ondblclick="Create()">
+	Create
+</button>
+
+	<script>
+		function Create() {
+			
+			// Create audio element.
+			var m = document.createElement(
+			"AUDIO");
+
+			if (m.canPlayType("audio/mpeg")) {
+				m.setAttribute("src", "bells.mp3");
+			} else {
+				m.setAttribute("src", "bells.ogg");
+			}
+
+			m.setAttribute("controls", "controls");
+			document.body.appendChild(m);
+		}
+	</script>
+
+</body>
+
+</html>
