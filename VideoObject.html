@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Video Object</title>
+    </head>
+    <body>
+        <center>
+            <h1 style= "color:green;">
+            Enjoy Video
+            </h1>
+            <h2> DOM Video Object</h2>
+            <video id="video"
+                   width="320"
+                   height="240"
+                   controls>
+                    <source src="C:\Users\Dell\Videos\Keep Holding On - Avril Lavigne (lyrics)-_Gcrx2Ab0FM.mp4" type="video/mp4">
+            </video>
+            <br>
+            <button type="button" onclick="videoplayer()">Click</button>
+            <p id="rk"></p>
+            <script>
+                function videoplayer(){
+                    var r=document.getElementById("video").duration;
+
+                    document.getElementById("rk").innerHTML=r;
+                }
+            </script>
+        </center>
+    </body>
+</html>
